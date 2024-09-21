@@ -22,11 +22,15 @@ hangman_art = {0: ("       ",
                    "  /    "),
                6: ("   o   ",
                    "  /|\\  ",
+                   "  / \\  "),
+               5: ("   o   ",
+                   "  /|\\  ",
+                   "  / \\   "),
+               6: ("   o   ",
+                   "  /|\\  ",
                    "  / \\  ")}
 
 def display_man(wrong_guesses):
-  if wrong_guesses > 6:
-    wrong_guesses = 6
   print("*******")
   for line in hangman_art[wrong_guesses]:
     print(line)
@@ -74,7 +78,7 @@ def main():
       display_answer(answer)
       print("You win!")
       is_running = False
-    elif wrong_guesses > len(hangman_art):
+    elif wrong_guesses >= len(hangman_art) - 1:
       display_man(wrong_guesses) 
       display_answer(answer)
       print("You lose!")
