@@ -1,10 +1,6 @@
 # Hangman in Python
 import random
-
-words = ("apple", "orange", "strawberry", "pear", 
-         "banana", "pineapple", "grape", "mango", 
-         "blueberry", "kiwi", "watermelon", "peach", 
-         "cherry", "plum", "raspberry", "papaya")
+from wordslist import words
 
 hangman_art = {0: ("       ",
                    "       ",
