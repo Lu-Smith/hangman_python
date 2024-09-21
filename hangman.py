@@ -43,8 +43,8 @@ def display_answer(answer):
   print(" ".join(answer))
 
 def main():
-  answer = random.choice(words)
-  hint = ["_"] * len(answer)
+  answer = random.choice(words).upper()
+  hint = ["_" if char.isalpha() else char for char in answer]
   wrong_guesses = 0
   gussed_letter = set()
   is_running = True
@@ -56,7 +56,7 @@ def main():
     
     if len(guess) != 1 or not guess.isalpha():
       print("*******")
-      print("Invalid input.")
+      print("Invalid input. Please enter a single letter.")
       continue
     
     if guess in gussed_letter:
