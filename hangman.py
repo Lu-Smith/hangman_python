@@ -6,7 +6,6 @@ words = ("apple", "orange", "strawberry", "pear",
          "blueberry", "kiwi", "watermelon", "peach", 
          "cherry", "plum", "raspberry", "papaya")
 
-# dictionary of key:()
 hangman_art = {0: ("   ",
                    "   ",
                    "   "),
@@ -29,9 +28,6 @@ hangman_art = {0: ("   ",
                    "/|\\",
                    "/ \\")}
 
-for line in hangman_art[5]:
-  print(line)
-
 def display_man(wrong_guesses):
   pass
 
@@ -42,7 +38,9 @@ def display_answer(answer):
   pass
 
 def main():
-  pass
+  answer = random.choice(words)
+  hint = ["_"] * len(answer)
+  print(hint)
 
 if __name__ == "__main__":
   main()
