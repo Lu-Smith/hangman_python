@@ -53,6 +53,18 @@ def main():
     display_answer(answer)
     guess = input("Enter a letter: ").lower()
     
+    if len(guess) != 1 or not guess.isalpha():
+      print("*******")
+      print("Invalid input")
+      continue
+    
+    if guess in gussed_letter:
+      print("*******")
+      print(f"{guess} is already guessed.")
+      continue
+    
+    gussed_letter.add(guess)
+    
     if guess in answer:
       for i in range(len(answer)):
         if answer[i] == guess:
