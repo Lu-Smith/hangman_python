@@ -1,4 +1,5 @@
 # Hangman in Python
+import random
 
 words = ("apple", "orange", "strawberry", "pear", 
          "banana", "pineapple", "grape", "mango", 
@@ -33,3 +34,15 @@ for line in hangman_art[5]:
 
 def display_man(wrong_guesses):
   pass
+
+def display_hint(hint):
+  pass
+
+def display_answer(answer):
+  pass
+
+def main():
+  pass
+
+if __name__ == "__main__":
+  main()
